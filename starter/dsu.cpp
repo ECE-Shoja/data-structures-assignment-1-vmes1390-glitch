@@ -5,32 +5,31 @@ vector<int> parent, sz;
 
 int findSet(int v) {
     // TODO: implement path compression
-    if(v==parent[v]){
+    if(parent[v]==v){
         return v;
     }
 
     else{
-        return parent[v]=findSet(parent[v]);
+        return parent[v]=findSet(v);
     }
 }
 
 void unionSet(int a, int b) {
     // TODO: implement union by size/rank
-    a=findSet(a)
-    b=findSet(b)
+    a=findSet(a);
+    b=findSet(b);
 
-    if(a==b){
-    }
+    if(a==b){}
 
     else{
         if(sz[a]<sz[b]){
             parent[a]=b;
-            sz[b]+=sz[a];
+            sz[b]+=sz[a]
         }
 
         else{
             parent[b]=a;
-            sz[a]+=sz[b];
+            sz[a]+=sz[b]
         }
     }
 }
