@@ -5,7 +5,7 @@ vector<int> parent, sz;
 
 int findSet(int v) {
     // TODO: implement path compression
-    if(parent[v]==v){
+    if(v==parent[v]){
         return v;
     }
 
