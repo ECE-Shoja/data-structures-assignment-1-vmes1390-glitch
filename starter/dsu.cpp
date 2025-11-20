@@ -16,8 +16,8 @@ int findSet(int v) {
 
 void unionSet(int a, int b) {
     // TODO: implement union by size/rank
-    a=findSet[a];
-    b=findSet[b];
+    a=findSet(a);
+    b=findSet(b);
 
     if(a==b){}
 
