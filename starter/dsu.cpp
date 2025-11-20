@@ -10,26 +10,26 @@ int findSet(int v) {
     }
 
     else{
-        return parent[v]=findSet(v);
+        return parent[v]=findSet(parent[v]);
     }
 }
 
 void unionSet(int a, int b) {
     // TODO: implement union by size/rank
-    a=findSet(a);
-    b=findSet(b);
+    a=findSet[a];
+    b=findSet[b];
 
     if(a==b){}
 
     else{
         if(sz[a]<sz[b]){
             parent[a]=b;
-            sz[b]+=sz[a]
+            sz[b]+=sz[a];
         }
 
         else{
             parent[b]=a;
-            sz[a]+=sz[b]
+            sz[a]+=sz[b];
         }
     }
 }
